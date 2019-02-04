@@ -1,0 +1,69 @@
+
+div#document {
+    width: 8.5in;
+    height: 11in;
+    background: white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    padding: 1in;
+    float: left;
+}
+
+h1, h3 {
+    margin: 0;
+}
+
+div#control {
+    background: white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    float: left;
+    margin: 0 10px;
+    padding: 20px;
+    display: block;
+    
+}
+
+div#control h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: rgb(149, 149, 149);
+    margin: 0;
+}
+
+div#control label {
+    display: block;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(175, 175, 175);
+
+}
+
+div#control input {
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid rgb(149, 149, 149);
+    border-radius: 20px;
+    padding: 6px;
+    font-size: 18px;
+}
+
+div#control textarea {
+    height: 180px;
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid rgb(149, 149, 149);
+    border-radius: 20px;
+    padding: 6px;
+    font-size: 18px;
+    resize: none;
+}
+
+div#control button {
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: rgb(186, 236, 236);
+}
