@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 div#document {
     width: 8.5in;
@@ -8,7 +9,8 @@ div#document {
     float: left;
 }
 
-h1, h3 {
+h1,
+h3 {
     margin: 0;
 }
 
@@ -19,7 +21,14 @@ div#control {
     margin: 0 10px;
     padding: 20px;
     display: block;
-    
+}
+
+div.input_box {
+    background: white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    padding: 10px;
+    display: block;
 }
 
 div#control h2 {
@@ -44,6 +53,17 @@ div#control input {
     border-radius: 20px;
     padding: 6px;
     font-size: 18px;
+}
+
+div#control select {
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid rgb(149, 149, 149);
+    border-radius: 20px;
+    padding: 6px;
+    font-size: 18px;
+    background: white;
+    color: rgb(149, 149, 149);
 }
 
 div#control textarea {

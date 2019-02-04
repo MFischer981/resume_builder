@@ -17,18 +17,23 @@
 
         <div id="objectiveHeading">
             <h2>Objectives</h2>
-            <p id="resumeObjective">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione necessitatibus ducimus tempore impedit iste. Necessitatibus minima natus mollitia, odio, atque exercitationem dolorum adipisci architecto odit harum quidem, tempora nesciunt repellendus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores error accusantium temporibus delectus explicabo distinctio in cupiditate sequi suscipit, quae vitae, impedit, sunt beatae quos. Voluptatibus dolorum labore fuga facilis?</p>
+            <p id="resumeObjective">
+
+            </p>
         </div>
 
         <div id="skillsHeading">
             <h2>Skills</h2>
             <ul id='resumeSkill'>
-            
+
             </ul>
         </div>
 
         <div id="workHeading">
             <h2>Experience</h2>
+            <ul id="resumeJob">
+
+            </ul>
         </div>
 
         <div id="educationHeading">
@@ -69,11 +74,14 @@
 
         <label for="">Phone Number</label>
         <input type="text" id="phone">
+        <button onclick="updateInfo()">Update Information</button>
+
 
         <!-- Career Objectives -->
         <h2>Career Objective</h2>
         <label for="">Career Objective</label>
         <textarea type="text" id="objective"></textarea>
+        <button onclick="updateObjective()">Update Objective</button>
 
         <!-- Relevant Skills -->
         <h2>Relevant Skills</h2>
@@ -82,16 +90,153 @@
 
         <label for="">Skill Description</label>
         <textarea type="text" id="skillDescription"></textarea>
-
         <button onclick="addSkill()">Add Skill</button>
 
         <!-- Work History -->
         <h2>Work History</h2>
+        <label for="">Position/Job Title</label>
+        <input type="text" id="jobName">
+
+        <label for="">Company</label>
+        <input type="text" id="jobCompany">
+
+        <div class="input_box">
+            <label for="">Date Ended</label>
+            <label for="">Month</label>
+            <select name="" id="jobStartMonth">
+                <option value="January">January</option>
+                <option value="Febuary">Febuary</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <label for="">Date</label>
+            <input type="text" id="jobStartYear">
+        </div>
+
+        <div class="input_box">
+            <label for="">Date Ended</label>
+            <label for="">Month</label>
+            <select name="" id="jobEndMonth">
+                <option value="January">January</option>
+                <option value="Febuary">Febuary</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <label for="">Date</label>
+            <input type="text" id="jobEndYear">
+        </div>
+
+        <label for="">Job Description</label>
+        <textarea type="text" id="jobDesc"></textarea>
+
+        <button onclick="addJob()">Add Position</button>
 
         <h2>Education/Certification</h2>
 
+        <label for="">Degree Type</label>
+        <select name="" id="degreeType">
+            <optgroup label="General Education">
+                <option value="High School Diploma">High School Diploma</option>
+                <option value="General Education Development (G.E.D.)">General Education Development (G.E.D.)</option>
+            </optgroup>
+
+            <optgroup label="Associates">
+                <option value="Associate of Arts (A.A.">Associate of Arts (A.A.)</option>
+                <option value="Associate of Science (A.S.)">Associate of Science (A.S.)</option>
+                <option value="Associate of Applied Science (AAS)">Associate of Applied Science (AAS)</option>
+            </optgroup>
+
+            <optgroup label="Bachelors">
+                <option value="Bachelor of Arts (B.A.)">Bachelor of Arts (B.A.)</option>
+                <option value="Bachelor of Science (B.S.)">Bachelor of Science (B.S.)</option>
+                <option value="Bachelor of Fine Arts (BFA)">Bachelor of Fine Arts (BFA)</option>
+                <option value="Bachelor of Applied Science (BAS)">Bachelor of Applied Science (BAS)</option>
+            </optgroup>
+
+            <optgroup label="Masters">
+                <option value="Master of Arts (M.A.)">Master of Arts (M.A.)</option>
+                <option value="Master of Science (M.S.)">Master of Science (M.S.)</option>
+                <option value="Master of Business Administration (MBA)">Master of Business Administration (MBA)</option>
+                <option value="Master of Fine Arts (MFA)">Master of Fine Arts (MFA)</option>
+            </optgroup>
+
+            <optgroup label="Doctorate">
+                <option value="Doctor of Philosophy (Ph.D.)">Doctor of Philosophy (Ph.D.)</option>
+                <option value="Juris Doctor (J.D.)">Juris Doctor (J.D.)</option>
+                <option value="Doctor of Medicine (M.D.)">Doctor of Medicine (M.D.)</option>
+                <option value="Doctor of Dental Surgery (DDS)">Doctor of Dental Surgery (DDS)</option>
+            </optgroup>
+
+        </select>
+
+        <label for="">Feild of Study <br> Leave </label>
+        <input type="text" id="degreeFeild">
+
+        <label for="">High School, College, or Universtiy</label>
+        <input type="text" id="degreeCollege">
+
+        <label for="">Weighted GPA (Grade Point Average)</label>
+        <input type="text" id="degreeCollege">
+
+        <div class="input_box">
+            <label for="">Date Ended</label>
+            <label for="">Month</label>
+            <select name="" id="degreeStartMonth">
+                <option value="January">January</option>
+                <option value="Febuary">Febuary</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <label for="">Date</label>
+            <input type="text" id="degreeStartMonth">
+        </div>
+
+        <div class="input_box">
+            <label for="">Date Ended</label>
+            <label for="">Month</label>
+            <select name="" id="degreeEndMonth">
+                <option value="January">January</option>
+                <option value="Febuary">Febuary</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <label for="">Date</label>
+            <input type="text" id="jobEndYear">
+        </div>
         <h2>References</h2>
-        <button onclick="updateResume()">Update Resume</button>
+
     </div>
 
 
