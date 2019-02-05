@@ -7,6 +7,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
+    <link media="print" href="print.css" />
+
 </head>
 
 <body>
@@ -38,17 +40,26 @@
 
         <div id="educationHeading">
             <h2>Education</h2>
+            <ul id="resumeEducation">
+
+            </ul>
         </div>
 
         <div id="certificationHeading">
             <h2>Certification</h2>
+            <ul id="resumeCertification">
+
+            </ul>
         </div>
 
         <div id="educationHeading">
             <h2>References</h2>
         </div>
     </div>
+
     <div id="control">
+        <button onclick="printPage()">Print</button>
+
         <!-- General Information -->
         <h2>General Information</h2>
         <label for="">First Name</label>
@@ -124,6 +135,8 @@
         <div class="input_box">
             <label for="">Date Ended</label>
             <label for="">Month</label>
+            <label for="">Still Work Here?</label>
+            <input type="checkbox" id="currentJob" checked/>
             <select name="" id="jobEndMonth">
                 <option value="January">January</option>
                 <option value="Febuary">Febuary</option>
@@ -149,15 +162,20 @@
 
         <h2>Education/Certification</h2>
 
+        <label for="">High School, College, or University</label>
+        <input type="text" id="degreeCollege">
+
         <label for="">Degree Type</label>
         <select name="" id="degreeType">
             <optgroup label="General Education">
+                <option value="Boot Camp">Boot Camp</option>
+                <option value="Trade School Certification">Trade School Certification</option>
                 <option value="High School Diploma">High School Diploma</option>
                 <option value="General Education Development (G.E.D.)">General Education Development (G.E.D.)</option>
             </optgroup>
 
             <optgroup label="Associates">
-                <option value="Associate of Arts (A.A.">Associate of Arts (A.A.)</option>
+                <option value="Associate of Arts (A.A.)">Associate of Arts (A.A.)</option>
                 <option value="Associate of Science (A.S.)">Associate of Science (A.S.)</option>
                 <option value="Associate of Applied Science (AAS)">Associate of Applied Science (AAS)</option>
             </optgroup>
@@ -185,14 +203,14 @@
 
         </select>
 
-        <label for="">Feild of Study <br> Leave </label>
-        <input type="text" id="degreeFeild">
+        <label for="">Field of Study</label>
+        <input type="text" id="degreeField">
 
-        <label for="">High School, College, or Universtiy</label>
-        <input type="text" id="degreeCollege">
-
+        <label for="">Include GPA?</label>
+        <input type="checkbox" id="includeGPA" checked/>
+        
         <label for="">Weighted GPA (Grade Point Average)</label>
-        <input type="text" id="degreeCollege">
+        <input type="text" id="degreeGPA">
 
         <div class="input_box">
             <label for="">Date Ended</label>
@@ -212,11 +230,12 @@
                 <option value="December">December</option>
             </select>
             <label for="">Date</label>
-            <input type="text" id="degreeStartMonth">
+            <input type="text" id="degreeStartYear">
         </div>
 
         <div class="input_box">
-            <label for="">Date Ended</label>
+            <label for="">Still Attending Here?</label>
+            <input type="checkbox" id="currentEducation" checked/>
             <label for="">Month</label>
             <select name="" id="degreeEndMonth">
                 <option value="January">January</option>
@@ -233,10 +252,63 @@
                 <option value="December">December</option>
             </select>
             <label for="">Date</label>
-            <input type="text" id="jobEndYear">
+            <input type="text" id="degreeEndYear">
         </div>
-        <h2>References</h2>
 
+        <label for="">Relevant Coursework /<br>Extra Curricular Activities</label>
+        <textarea type="text" id="degreeDesc"></textarea>
+
+        <button onclick="addEducation()">Add Education</button>
+        <h2>Certification</h2>
+
+        <label for="">Name of Certification</label>
+        <input type="text" id="certificateName">
+
+        <label for="">Certification Issuer</label>
+        <input type="text" id="certificateIssuer"/>
+        
+        <div class="input_box">
+            <label for="">Certification Issued</label>
+            <label for="">Month</label>
+            <select name="" id="certificateIssueMonth">
+                <option value="January">January</option>
+                <option value="Febuary">Febuary</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <label for="">Date</label>
+            <input type="text" id="certificateIssueYear">
+        </div>
+
+        <div class="input_box">
+            <label for="">Certification Expires</label>
+            <label for="">Month</label>
+            <select name="" id="certificateExpireMonth">
+                <option value="January">January</option>
+                <option value="Febuary">Febuary</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <label for="">Date</label>
+            <input type="text" id="certificateExpireYear">
+            <button onclick="addCertificate()">Add Certification</button>
+        </div>
     </div>
 
 

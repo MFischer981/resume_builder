@@ -6,7 +6,7 @@ div#document {
     background: white;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
     padding: 1in;
-    float: left;
+    float: right;
 }
 
 h1,
@@ -15,12 +15,15 @@ h3 {
 }
 
 div#control {
+    display: block;
     background: white;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-    float: left;
     margin: 0 10px;
     padding: 20px;
-    display: block;
+    position: fixed;
+    top: 0;
+    height: 90vh;
+    overflow-y: scroll;
 }
 
 div.input_box {
@@ -87,3 +90,27 @@ div#control button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background: rgb(186, 236, 236);
 }
+
+
+@page { size: auto;  margin: 0; }
+
+@media print {
+    body {
+        margin: 0;
+    }
+    
+    div#document {
+        width: 8.5in;
+        height: 11in;
+        background: white;
+        padding: 1in;
+        float: none;
+        margin: 0;
+        box-shadow: none;
+    }
+    
+    div#control {
+        display: none;
+    }
+}
+
